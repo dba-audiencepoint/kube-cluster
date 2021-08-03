@@ -1,0 +1,9 @@
+[masters]
+master ansible_host=192.168.1.105 ansible_user=dba
+
+[workers]
+worker1 ansible_host=192.168.1.108 ansible_user=dba
+
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
