@@ -26,6 +26,13 @@ kube-prometheus-stack:
 stargate:
   enabled: false
 medusa:
-  enabled: false
+  enabled: true
+  storage: s3_compatible
+  storage_properties:
+      host: sfo3.digitaloceanspaces.com
+      port: 443
+      secure: "True"
+  bucketName: medusa-backup
+  storageSecret: k8ssandra-medusa-key
 reaper:
-  enabled: false
+  enabled: true
